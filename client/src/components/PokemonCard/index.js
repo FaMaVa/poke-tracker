@@ -46,7 +46,7 @@ const PokemonCard = ({
             const { me } = cache.readQuery({ query: QUERY_ME });
             cache.writeQuery({
                 query: QUERY_ME,
-                data2: { me: { ...me, pokemons: [...me.pokemons, addPokemon] } },
+                data: { me: { ...me, pokemons: [...me.pokemons, addPokemon] } },
             });
         },
     });
